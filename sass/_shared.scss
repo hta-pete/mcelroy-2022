@@ -108,6 +108,24 @@ footer{
       margin:0 0 0 0.75em;
     }
   }
+  .footer-social{
+    padding:25px 0 60px 0;
+    border-top:1px solid rgba(0,0,0,0.35);
+    font-size:1.3rem;
+    color:var(--secondary);
+    a{
+      display:inline-block;
+      width:38px;
+      height:38px;
+      border-radius:100%;
+      border:1px solid var(--red);
+      text-align:center;
+      line-height:36px;
+      font-size:1.8rem;
+      color:var(--red);
+      margin:0 0.2em;
+    }
+  }
  
 }
 
