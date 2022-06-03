@@ -1,0 +1,39 @@
+.hero{
+  position:relative;
+  height:100vh;
+  background:var(--primary);
+}
+.hero_text{
+  z-index:1;
+  position:absolute;
+  width:100%;
+  bottom:120px;
+  text-align:center;
+  .btn{
+    position:relative;
+    left:50%;
+    @include transform(translateX(-50%));
+  }
+}
+
+.home-bonuses{
+  background:var(--red) url('../img/home/home-bonuses-bg.jpg') no-repeat center right;
+  background-size:auto 100%;
+  color:white;
+  padding:120px 0;
+}
+.home-bonuses_item{
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,0.5);
+  padding:15px 0;
+  &:last-child{
+    border-right:none;
+  }
+}
+
+.home-flatbed-training{
+  .img--full{
+    background:var(--primary);
+  }
+
+}
