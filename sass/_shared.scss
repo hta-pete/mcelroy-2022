@@ -81,7 +81,8 @@ header{
       }
     }
     .mobile_copyright, .mobile_address{
-      font-size:1.3rem;
+      font-size:1.4rem;
+      line-height:1.5;
       color:rgba(255,255,255,0.75);
 
     }
@@ -137,6 +138,14 @@ header.active{
     }
     .header-nav{
       display:block;
+    }
+    .header-right{
+      .header-phone{
+        display:block;
+      }
+      .btn-primary.btn--white{
+        display:block;
+      }
     }
   }
   

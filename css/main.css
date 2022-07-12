@@ -503,7 +503,8 @@ header .mobile-nav .mobile-social a {
   margin: 0 0.25em;
 }
 header .mobile-nav .mobile_copyright, header .mobile-nav .mobile_address {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.75);
 }
 header .header-right .header-phone {
@@ -558,6 +559,12 @@ header.active .mobile-menu-btn span {
     display: none;
   }
   header .header-nav {
+    display: block;
+  }
+  header .header-right .header-phone {
+    display: block;
+  }
+  header .header-right .btn-primary.btn--white {
     display: block;
   }
 }
