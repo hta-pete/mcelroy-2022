@@ -206,6 +206,7 @@ footer{
     background-size:cover;
   }
   .footer-nav{
+    display:none;
     background:var(--primary);
     padding:30px 0;
     text-align:center;
@@ -223,12 +224,14 @@ footer{
     }
   }
   .footer-quick-links{
+    display:none;
     padding:50px 0;
     .btn{
       margin:0 0 0 0.75em;
     }
   }
   .footer-social{
+    display:none;
     padding:25px 0 60px 0;
     border-top:1px solid rgba(0,0,0,0.35);
     font-size:1.3rem;
@@ -246,7 +249,21 @@ footer{
       margin:0 0.2em;
     }
   }
- 
 }
-
+@media(min-width: 768px) {
+  footer{
+    .footer-apply-cta{
+      padding:150px 0;
+    }
+    .footer-nav{
+      display:block;
+    }
+    .footer-quick-links{
+      display:flex;
+    }
+    .footer-social{
+      display:flex;
+    }
+  }
+}
 
