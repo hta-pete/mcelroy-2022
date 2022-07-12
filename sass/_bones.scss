@@ -42,7 +42,7 @@ COLORS
 
 body {
   color: var(--primary);
-  min-width:1068px;
+  //min-width:1068px;
 }
 
 /* ––––––––––––––––––––––––––––––––––
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .heading--jumbo{
-  font-size:12rem;
+  font-size:6rem;
   letter-spacing:-0.025em;
   line-height:0.9;
 }
@@ -103,6 +103,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size:2rem;
   font-weight:600;
   line-height:1;
+}
+@media(min-width: 600px) {
+  .heading--jumbo{
+    font-size:8rem;
+  }
+}
+@media(min-width: 768px) {
+  .heading--jumbo{
+    font-size:12rem;
+  }
 }
 
 .sub-heading--1{
@@ -135,18 +145,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:700;
 }
 
-
 strong{
   font-weight:700;
 }
-
-
 
 .text--block{
   max-width:500px;
   margin:0 auto;
 }
-
 
 /* ————————————————————–––––––
 PADDING
@@ -183,6 +189,7 @@ PADDING
 .p--3{
   padding:9em;
 }
+
 /* ————————————————————–––––––
 Container
 ————————————————————––––––– */
@@ -196,7 +203,6 @@ Container
   margin: 0 auto;
   padding:0 20px;
 }
-
 
 /* ————————————————————–––––––
 Flex
@@ -285,10 +291,8 @@ Image size
 .img--fit{
   height:100%;
   background:var(--primary);
-
 }
 .img--fit img, .img--fit video {
-  //position:absolute;
   display: block;
   top: 0;
   left: 0;
@@ -301,7 +305,6 @@ Image size
   width: 100%;
   height: auto;
 }
-
 .vid--fit video {
   top: 0;
   left: 0;
@@ -311,7 +314,9 @@ Image size
   @include opacity(0.65);
 }
 
-
+/* ————————————————————–––––––
+Buttons
+————————————————————––––––– */
 .btn{
   display:inline-block;
   font-size:1.4rem;
@@ -323,6 +328,7 @@ Image size
 .btn-group{
   text-align:center;
   .btn{
+    display:inline-block;
     margin:0 0.5em;
   }
 }

@@ -40,6 +40,14 @@ $(function(){
     }  
 
   }
+
+
+  $(".mobile-menu-btn").on("click", function(){
+
+    $(this).toggleClass("active");
+    $(".mobile-nav").toggleClass("show");
+
+  });
  
 });
 
