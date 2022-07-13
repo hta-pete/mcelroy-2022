@@ -80,7 +80,6 @@ p {
   line-height: 1.5;
   font-weight: 400;
   margin-top: 15px;
-  color: var(--secondary);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,25 +97,24 @@ h1, h2, h3, h4, h5, h6 {
 .heading--1 {
   font-size: 5.5rem;
   letter-spacing: -0.025em;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .heading--2 {
   font-size: 3.6rem;
   letter-spacing: -0.025em;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .heading--3 {
   font-size: 3rem;
   letter-spacing: -0.025em;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .heading--4 {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1;
+  font-size: 2.4rem;
+  line-height: 1.1;
 }
 
 @media (min-width: 600px) {
@@ -138,14 +136,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .sub-heading--2 {
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .sub-heading--3 {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -169,6 +167,34 @@ strong {
 .text--block {
   max-width: 500px;
   margin: 0 auto;
+}
+
+.text--list {
+  padding-right: 30px;
+}
+.text--list li {
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+.text--list li:last-child {
+  margin-bottom: 0;
+}
+.text--list li:before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 1px;
+  left: -25px;
+  top: 9px;
+  background: var(--red);
+}
+
+.text--center {
+  text-align: center;
 }
 
 /* ————————————————————–––––––
@@ -203,7 +229,7 @@ PADDING
 }
 
 .p--1 {
-  padding: 2.5em;
+  padding: 2em;
 }
 
 .p--2 {
@@ -214,19 +240,65 @@ PADDING
   padding: 9em;
 }
 
+.pt--1 {
+  padding-top: 2em;
+}
+
+.pt--2 {
+  padding-top: 3em;
+}
+
+.pt--3 {
+  padding-top: 4em;
+}
+
+.pt--4 {
+  padding-top: 5em;
+}
+
+.pt--5 {
+  padding-top: 8em;
+}
+
+.pb--1 {
+  padding-bottom: 2em;
+}
+
+.pb--2 {
+  padding-bottom: 3em;
+}
+
+.pb--3 {
+  padding-bottom: 4em;
+}
+
+.pb--4 {
+  padding-bottom: 5em;
+}
+
+.pb--5 {
+  padding-bottom: 8em;
+}
+
 /* ————————————————————–––––––
 Container
 ————————————————————––––––– */
 .container {
   width: min(100%, 1280px);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2em;
+}
+
+.container--md {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  padding: 0 2em;
 }
 
 .container--sm {
   width: min(100%, 800px);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2em;
 }
 
 /* ————————————————————–––––––
@@ -334,6 +406,20 @@ Image size
   object-fit: cover;
 }
 
+.img--stretch {
+  align-self: stretch;
+  background: var(--primary);
+}
+
+.img--stretch img, .img--stretch video, .img--fit img, .img--fit video {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .vid--full video {
   width: 100%;
   height: auto;
@@ -403,6 +489,18 @@ Buttons
   text-align: center;
 }
 .btn-watch-video_right i {
+  font-size: 1.2rem;
+}
+
+.btn-watch-video_square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+}
+.btn-watch-video_square i {
   font-size: 1.2rem;
 }
 
@@ -692,6 +790,9 @@ footer .footer-social a {
   height: 100vh;
   background: var(--primary);
 }
+.hero.hero--short {
+  height: 90vh;
+}
 
 .hero_text {
   z-index: 1;
@@ -728,6 +829,148 @@ footer .footer-social a {
 
 .home-flatbed-training .img--full {
   background: var(--primary);
+}
+
+.pay-scale {
+  padding: 120px 0;
+  background: var(--red) url("../img/drive-with-us/pay-scale-bg.jpg") no-repeat bottom right;
+  background-size: auto 65%;
+  color: white;
+}
+.pay-scale .pay-scale_rows-col:first-child {
+  width: 50%;
+}
+.pay-scale .pay-scale_rows-col:nth-child(2), .pay-scale .pay-scale_rows-col:nth-child(3) {
+  width: 25%;
+}
+.pay-scale p {
+  color: white;
+}
+.pay-scale li {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.career-offerings {
+  padding: 60px 0;
+}
+
+.career-offerings_item {
+  padding: 60px 0;
+  border-bottom: 1px solid #ddd;
+}
+.career-offerings_item:last-child {
+  border-bottom: none;
+}
+.career-offerings_item .text--list {
+  width: 50%;
+}
+
+.orientation-locations {
+  background: var(--red) url("../img/home/home-bonuses-bg.jpg") no-repeat center right;
+  background-size: auto 100%;
+  color: white;
+  padding: 120px 0;
+}
+.orientation-locations i {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.orientation-locations_item {
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 15px 0;
+}
+.orientation-locations_item:last-child {
+  border-right: none;
+}
+
+.video-grid {
+  padding: 120px 0;
+  background: #f6f6f6;
+}
+
+.video-grid_item-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+}
+.video-grid_item-thumb img {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––
+
+Modals
+
+––––––––––––––––––––––––––––––––––––––––––– */
+#video-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  background: rgba(20, 20, 20, 0.95);
+  overflow: scroll;
+}
+#video-modal .modal {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 960px;
+  padding-bottom: 56.25%;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.close-modal-btn {
+  position: absolute;
+  z-index: 88;
+  top: -40px;
+  right: 0;
+  cursor: pointer;
+}
+.close-modal-btn i {
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+}
+
+#video-modal .video-container {
+  width: 100%;
+}
+
+#video-modal .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#video-modal .video-container .ytp-title-text {
+  display: none !important;
+}
+
+@media (min-width: 960px) {
+  #video-modal .modal {
+    height: 540px;
+    padding-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
